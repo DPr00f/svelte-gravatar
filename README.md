@@ -3,11 +3,13 @@ Svelte component for rendering a gravatar profile image. Adjusts automatically t
 
 Based on the brilliant [react-gravatar](https://github.com/KyleAMathews/react-gravatar/blob/master/README.md) from Kyle Mathews.
 
-## Build status
+Build [![CircleCI](https://circleci.com/gh/DPr00f/svelte-gravatar/tree/master.svg?style=svg)](https://circleci.com/gh/DPr00f/svelte-gravatar/tree/master)
 
-[![CircleCI](https://circleci.com/gh/DPr00f/svelte-gravatar/tree/master.svg?style=svg)](https://circleci.com/gh/DPr00f/svelte-gravatar/tree/master)
+NPM Latest version [![npm version](https://badge.fury.io/js/svelte-gravatar.svg)](https://badge.fury.io/js/svelte-gravatar)
 
 ## Demo
+
+https://svelte-gravatar.now.sh/
 
 ## Usage
 See https://en.gravatar.com/site/implement/images/ for documentation on
