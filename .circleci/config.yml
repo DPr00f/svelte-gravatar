@@ -36,12 +36,13 @@ jobs:
 
 workflows:
   version: 2
-  deploy:
+  test-deploy:
     jobs:
-      - deploy:
+      - test:
           filters:
             tags:
               only: /^v.*/
+      - deploy:
           filters:
             tags:
               only: /^v.*/
