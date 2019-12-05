@@ -1,6 +1,6 @@
 {
   "name": "svelte-gravatar",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Svelte component for rendering a gravatar profile image.",
   "main": "component/Gravatar.svelte",
   "svelte": "component/Gravatar.svelte",
