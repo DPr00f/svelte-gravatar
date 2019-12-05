@@ -1,0 +1,31 @@
+{
+  "name": "svelte-gravatar",
+  "version": "1.0.0",
+  "description": "Svelte component for rendering a gravatar profile image.",
+  "main": "component/Gravatar.svelte",
+  "svelte": "component/Gravatar.svelte",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DPr00f/svelte-gravatar.git"
+  },
+  "keywords": [
+    "svelte",
+    "image",
+    "gravatar",
+    "email"
+  ],
+  "author": "Joao Lopes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DPr00f/svelte-gravatar/issues"
+  },
+  "homepage": "https://github.com/DPr00f/svelte-gravatar#readme",
+  "dependencies": {
+    "md5": "^2.2.1",
+    "svelte": "^3.16.0",
+    "svelte-waypoint": "^0.1.3"
+  }
+}
