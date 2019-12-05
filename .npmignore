@@ -1,0 +1,6 @@
+node_modules
+__sapper__
+.circleci
+src
+static
+package-lock.json

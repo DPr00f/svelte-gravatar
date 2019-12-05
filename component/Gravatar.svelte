@@ -22,8 +22,9 @@
   $: base = `${protocol}${domain}/avatar/`;
   $: queryString = getQuery(size, rating, def, 1);
   $: retinaQuerystring = getQuery(size, rating, def, 2);
-  $: src = `${base}${md5}?${queryString}`;
-  $: retinaSrc = `${base}${md5}?${retinaQuerystring}`;
+  $: hash = md5 || getMD5(formattedEmail, {encoding: 'binary'});
+  $: src = `${base}${hash}?${queryString}`;
+  $: retinaSrc = `${base}${hash}?${retinaQuerystring}`;
   $: formattedSize = typeof size === 'number' ? `${size}px` : size;
   $: WrapperComponent = useWaypoint ? Waypoint : Empty;
 
@@ -46,23 +47,14 @@
 </script>
 
 <WrapperComponent {...waypointOptions}>
-  {#if !md5 && !!email}
-    <svelte:self
-      {size}
-      {rating}
-      {protocol}
-      {email}
-      md5="{getMD5(formattedEmail, {encoding: 'binary'})}"
-    />
-  {:else if md5}
-    <img
-      alt="{typeof alt === undefined ? `Gravatar for ${formattedEmail}` : alt}"
-      style="{extraStyles}"
-      class="{extraClass}"
-      src="{isRetina() && !hasSrcset ? retinaSrc : src}"
-      srcset="{hasSrcset ? `${retinaSrc} 2x` : undefined}"
-      width="{formattedSize}"
-      height="{formattedSize}"
-    />
-  {/if}
+  <img
+    alt="{typeof alt === undefined ? `Gravatar for ${formattedEmail}` : alt}"
+    style="{extraStyles}"
+    class="{extraClass}"
+    src="{isRetina() && !hasSrcset ? retinaSrc : src}"
+    srcset="{hasSrcset ? `${retinaSrc} 2x` : undefined}"
+    width="{formattedSize}"
+    height="{formattedSize}"
+    on:error
+  />
 </WrapperComponent>
