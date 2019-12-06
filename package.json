@@ -2,7 +2,8 @@
   "name": "svelte-gravatar",
   "version": "1.0.2",
   "description": "Svelte component for rendering a gravatar profile image.",
-  "main": "component/Gravatar.svelte",
+  "main": "index.js",
+  "module": "index.mjs",
   "svelte": "component/Gravatar.svelte",
   "scripts": {
     "dev": "sapper dev",
@@ -29,6 +30,9 @@
     "md5": "^2.2.1",
     "svelte": "^3.16.0",
     "svelte-waypoint": "^0.1.3"
+  },
+  "peerDependencies": {
+    "svelte": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",
